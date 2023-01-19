@@ -1,0 +1,24 @@
+main {
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-wrapper:nth-child(odd) {
+    background-color: var(--transparent-dark);
+}
+.btn-wrapper__btn {
+    font-family: 'Verdana', 'Arial', sans-serif;
+    background-color: #fff;
+    font-size: 20px;
+    padding: 0.3em 1em;
+    cursor: pointer;
+    border-radius: var(--border-radius-medium);
+    border: 3px solid transparent;
+}

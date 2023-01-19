@@ -8,7 +8,7 @@ const state = {
 const dom = {
   root: document.documentElement,
   body: document.querySelector('body'),
-  buttons: document.querySelectorAll('.show-btn'),
+  buttons: document.querySelectorAll('.btn-wrapper__btn'),
 
   themeBtn: document.querySelector('.header__btn_theme'),
   sizeUpBtn: document.querySelector('.header__btn_size-up'),
