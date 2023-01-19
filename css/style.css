@@ -141,21 +141,21 @@ main {
 
 /***************** BUTTON SHOW BOX *****************/
 .show-box {
-  padding: 0 5% 0 5%;
+  display: none;
   position: absolute;
   top: 5%;
   left: 15%;
   bottom: 5%;
   right: 15%;
-  border-radius: var(--border-radius-medium);
-  border: 5px solid var(--accent-color);
-  background-color: #000d;
-  color: white;
-  display: none;
+
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  border-radius: var(--border-radius-medium);
+  border: 5px solid var(--accent-color);
+  background-color: #000d;
 }
 .code-title {
   font-size: 2em;
@@ -172,10 +172,15 @@ main {
 .btn.show-box__btn {
   padding: 8px 24px;
 }
-
-#effect-css {
-  margin-top: 1em;
-  user-select: text;
+.show-box code {
+  background-color: transparent;
+  color: #fff;
+}
+span.hljs-number {
+  color: #999;
+}
+span.hljs-attribute {
+  color: #ffcc6d;
 }
 
 

@@ -45,6 +45,7 @@ function changeSize(up) {
 function showCode(buttonId) {
   dom.showBoxText.innerHTML = effects[buttonId];
   dom.showBox.style.display = 'flex';
+  hljs.highlightAll();
 }
 
 function copyCode() {
