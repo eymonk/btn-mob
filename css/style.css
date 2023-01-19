@@ -1,0 +1,275 @@
+/***************** PRESETS *****************/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root{
+    --main-color: hsl(200, 90%, 75%);
+    --second-color: hsl(200, 100%, 50%);
+    --gradient: linear-gradient(var(--second-color), var(--main-color));
+    --gray-color: #444;
+    --light-gray-color: #666;
+}
+
+html{
+  height: 100%;
+  font-size: 18px;
+  font-family: 'Trebuchet MS';
+  color: var(--gray-color);
+}
+
+body{
+  background-color: var(--main-color);
+  height: 100%;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.usual-btn{
+  font-family: 'Trebuchet MS';
+  font-size: 1em;
+  padding: 0.3em 1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.5em 0 0.5em;
+  transition: 150ms;
+  background-color: white;
+}
+.usual-btn:hover{
+  background-color: gold;
+}
+.usual-btn:focus{
+  outline: none;
+}
+
+
+
+/***************** MENU *****************/
+header{
+  height: 10%;
+  padding: 0 6em 0 3em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--gradient);
+  box-shadow: 0px 5px 8px var(--gray-color);
+}
+
+.menu{
+  list-style: none;
+}
+
+.menu-btn{
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 1.5em;
+  cursor: pointer;
+  transition: .15s;
+}
+.menu-btn:hover{
+  transform: scale(1.1);
+}
+
+/* change size of buttons*/
+.btn-size{
+  padding: 0 0.4em 0 0.4em;
+  margin: 0 .1em 0 .1em;
+}
+.btn-size:last-child{
+  padding: 0 0.5em 0 0.5em;
+}
+
+
+
+/***************** BUTTONS-AREA *****************/
+main{
+  height: 90%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.show-btn{
+  font-family: 'Trebuchet MS';
+  background-color: #fff;
+  font-size: 1.3em;
+  padding: 0.3em 1em;
+  cursor: pointer;border-radius: 5px;
+  border: 3px solid transparent;
+}
+
+.btn-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/***************** BUTTON SHOW BOX *****************/
+.show-box{
+  padding: 0 5% 0 5%;
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  bottom: 5%;
+  right: 15%;
+  border-radius: 10px;
+  border: 5px solid gold;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.code-title{
+  font-size: 2em;
+  color: gold;
+}
+#effect-css{
+  margin-top: 1em;
+  user-select: text;
+}
+
+
+/***************** BUTTONS AND THEIR ANIMATIONS *****************/
+#squeezeMe{
+  padding: 0.1em 0.8em;
+  border: 8px solid transparent;
+  transition: 150ms;
+}
+#squeezeMe:hover{
+  border-right: 8px solid gold;
+  border-left: 8px solid gold;
+  transform: scaleX(0.95);
+}
+
+#hangMe:hover{
+  animation-name: hangMe;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+}
+@keyframes hangMe{
+  from{
+    transform: rotateX(0deg);
+  } to {
+    transform: rotate(4deg);
+    background-color: gold;
+  }
+}
+
+#lightMe{
+  transition: box-shadow 200ms, color 200ms;
+}
+#lightMe:hover{
+  color: gold;
+  box-shadow: 3px 4px 3px gold;
+}
+
+
+#transparentMe{
+  transition: transform 200ms, background-color 200ms;
+}
+#transparentMe:hover{
+  transform: scale(1.05);
+  border-bo
+  background-color: transparent;
+}
+
+
+#skewMe{
+  transition: 200ms;
+}
+#skewMe:hover{
+  transform: skew(-7deg);
+  background-color: gold;
+}
+
+
+#offsetMe{
+  outline: 5px solid transparent;
+  outline-offset: -9px;
+  transition: 250ms;
+}
+#offsetMe:hover{
+  outline-color: gold;
+  outline-offset: -2px;
+}
+
+
+#pushMe{
+  padding: 0.3em 1.15em;
+  border-radius: 13px;
+  border: none;
+  border-bottom: 6px solid #444;
+  transition: 200ms;
+}
+#pushMe:hover{
+  border-bottom: 4px solid #444;
+  transform: translateY(1px);
+  background-color: gold;
+}
+
+#scaleMe{
+  transition: 150ms;
+}
+#scaleMe:hover{
+  transform: scale(1.05);
+  background-color: gold;
+}
+
+
+#shadowMe{
+  transition: 250ms;
+}
+#shadowMe:hover{
+  box-shadow: inset 0px 0px 3px 3px gold;
+}
+
+
+#colorMe{
+  background-color: transparent;
+  border: 3px solid black;
+  transition: 200ms;
+}
+#colorMe:hover{
+  border: 3px solid transparent;
+  background-color: gold;
+  color: white;
+}
+
+
+#descendMe{
+  transition: 150ms;
+}
+#descendMe:hover{
+  background-color: gold;
+  transform: translateY(2.5px);
+}
+
+
+#squareMe{
+  border-radius: 25px;
+  transition: 150ms;
+  border: 3px solid transparent;
+}
+#squareMe:hover{
+  border-radius: 0px;
+  border: 3px solid gold;
+}
