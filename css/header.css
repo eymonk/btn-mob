@@ -13,6 +13,15 @@ header {
     color: #000;
 }
 
+.header__wrapper_title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.header__wrapper_title .header__icon {
+    width: 40px;
+}
+
 .header__wrapper_btns {
     display: flex;
     align-items: center;
