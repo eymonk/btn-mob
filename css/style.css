@@ -119,7 +119,7 @@ main {
 .show-btn {
   font-family: 'Verdana', 'Arial', sans-serif;
   background-color: #fff;
-  font-size: 1.3em;
+  font-size: 20px;
   padding: 0.3em 1em;
   cursor: pointer;
   border-radius: var(--border-radius-medium);
@@ -161,6 +161,18 @@ main {
   font-size: 2em;
   color: var(--accent-color);
 }
+.show-box__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.show-box__wrapper_code {
+  flex-direction: column;
+}
+.btn.show-box__btn {
+  padding: 8px 24px;
+}
+
 #effect-css {
   margin-top: 1em;
   user-select: text;

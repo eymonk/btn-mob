@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="css/queries.css">
     <link rel="icon" href="img/show-me-icon.ico">
     <title>btn-mob</title>
-    <script defer src="js/script.js"></script>
+    <script defer type="module" src="js/script.js"></script>
   </head>
   <body>
     <header class="header">
@@ -75,11 +75,15 @@
       </div>
     </main>
     <div class="show-box">
-      <div>
+      <div class="show-box__wrapper show-box__wrapper_code">
         <p class="code-title">Button's CSS code</p>
         <div id="show-box-text">btn css</div>
       </div>
-      <button class="btn">close</button>
+      <p class="show-box__info"> </p>
+      <div class="show-box__wrapper">
+        <button class="btn show-box__btn show-box__btn_copy">copy</button>
+        <button class="btn show-box__btn show-box__btn_close">close</button>
+      </div>
     </div>
   </body>
 </html>
