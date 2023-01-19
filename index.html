@@ -7,12 +7,16 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/queries.css">
     <link rel="icon" href="img/show-me-icon.ico">
-    <title>show me</title>
+    <title>btn-mob</title>
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <header>
-      <h1 onclick="reload()">show me</h1>
+    <header class="header">
+      <div class="header__wrapper">
+        <h1 class="header__title" onclick="reload()">btn-mob</h1>
+        <p class="header__info">very simple css-effects for btns</p>
+      </div>
+
       <ul class="menu">
         <li class="menu-btn" onclick="changeTheme()">🌗</li>
         <li class="menu-btn">
@@ -25,11 +29,11 @@
       </ul>
     </header>
     <main>
-      <div class="btn-div dark">
+      <div class="btn-div">
         <button id="squeezeMe" class="show-btn" onclick="showMe(this.id)">show me</button>
       </div>
       <div class="btn-div">
-        <button id="hangMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="rocketMe" class="show-btn" onclick="showMe(this.id)">show me</button>
       </div>
       <div class="btn-div">
         <button id="lightMe" class="show-btn" onclick="showMe(this.id)">show me</button>
@@ -38,19 +42,19 @@
         <button id="transparentMe" class="show-btn" onclick="showMe(this.id)">show me</button>
       </div>
       <div class="btn-div">
-        <button id="skewMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="shadowMe" class="show-btn" onclick="showMe(this.id)">show me</button>
       </div>
       <div class="btn-div">
         <button id="offsetMe" class="show-btn" onclick="showMe(this.id)">show me</button>
       </div>
       <div class="btn-div">
-        <button id="pushMe" class="show-btn" onclick="showMe(this.id)">show me</button>
-      </div>
-      <div class="btn-div">
         <button id="scaleMe" class="show-btn" onclick="showMe(this.id)">show me</button>
       </div>
       <div class="btn-div">
-        <button id="shadowMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="pushMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+      </div>
+      <div class="btn-div">
+        <button id="skewMe" class="show-btn" onclick="showMe(this.id)">show me</button>
       </div>
       <div class="btn-div">
         <button id="colorMe" class="show-btn" onclick="showMe(this.id)">show me</button>

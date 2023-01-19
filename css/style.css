@@ -1,28 +1,32 @@
 /***************** PRESETS *****************/
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   user-select: none;
 }
 
-:root{
+:root {
   --main-color: #777;
   --secondary-color: #333;
   --accent-color: #fa0;
-  --gradient: linear-gradient(var(--secondary-color), var(--main-color));
   --gray-color: #444;
-  --light-gray-color: #666;
   --transparent-dark: #0007;
+  --gradient: linear-gradient(var(--secondary-color), var(--main-color));
+
+  --transition-fast: 150ms;
+  --transition-medium: 200ms;
+
+  --border-radius-medium: 10px;
 }
 
-html{
+html {
   font-size: 18px;
-  font-family: 'Trebuchet MS';
+  font-family: 'Verdana', 'Arial', sans-serif;
   height: 100%;
 }
 
-body{
+body {
   position: relative;
   min-height: 100vh;
   height: 100%;
@@ -30,31 +34,31 @@ body{
   background-color: var(--main-color);
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-.usual-btn{
-  font-family: 'Trebuchet MS';
+.usual-btn {
+  font-family: 'Verdana';
   font-size: 1em;
   padding: 0.3em 1em;
-  border-radius: 5px;
+  border-radius: var(--border-radius-medium);
   border: none;
   cursor: pointer;
   margin: 0 0.5em 0 0.5em;
   transition: 150ms;
   background-color: #fff;
 }
-.usual-btn:hover{
+.usual-btn:hover {
   background-color: var(--accent-color);
 }
-.usual-btn:focus{
+.usual-btn:focus {
   outline: none;
 }
 
 
-header{
+header {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -64,11 +68,15 @@ header{
   box-shadow: 0px 5px 8px var(--gray-color);
 }
 
-.menu{
+.header__info {
+  color: #000;
+}
+
+.menu {
   list-style: none;
 }
 
-.menu-btn{
+.menu-btn {
   font-size: 1.3rem;
   font-weight: bold;
   display: inline-block;
@@ -76,35 +84,36 @@ header{
   cursor: pointer;
   transition: .15s;
 }
-.menu-btn:hover{
+.menu-btn:hover {
   transform: scale(1.1);
 }
 
 /* change size of buttons*/
-.btn-size{
+.btn-size {
   padding: 0 0.4em 0 0.4em;
   margin: 0 .1em 0 .1em;
 }
-.btn-size:last-child{
+.btn-size:last-child {
   padding: 0 0.5em 0 0.5em;
 }
 
 
 
 /***************** BUTTONS-AREA *****************/
-main{
+main {
   height: 90%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.show-btn{
-  font-family: 'Trebuchet MS';
+.show-btn {
+  font-family: 'Verdana';
   background-color: #fff;
   font-size: 1.3em;
   padding: 0.3em 1em;
-  cursor: pointer;border-radius: 5px;
+  cursor: pointer;
+  border-radius: var(--border-radius-medium);
   border: 3px solid transparent;
 }
 
@@ -122,14 +131,14 @@ main{
 
 
 /***************** BUTTON SHOW BOX *****************/
-.show-box{
+.show-box {
   padding: 0 5% 0 5%;
   position: absolute;
   top: 5%;
   left: 15%;
   bottom: 5%;
   right: 15%;
-  border-radius: 10px;
+  border-radius: var(--border-radius-medium);
   border: 5px solid var(--accent-color);
   background-color: #000d;
   color: white;
@@ -139,137 +148,131 @@ main{
   justify-content: space-around;
   align-items: center;
 }
-.code-title{
+.code-title {
   font-size: 2em;
   color: var(--accent-color);
 }
-#effect-css{
+#effect-css {
   margin-top: 1em;
   user-select: text;
 }
 
 
 /***************** BUTTONS AND THEIR ANIMATIONS *****************/
-#squeezeMe{
+#squeezeMe {
   padding: 0.1em 0.8em;
   border: 8px solid transparent;
-  transition: 150ms;
+  transition: border var(--transition-fast);
 }
-#squeezeMe:hover{
+#squeezeMe:hover {
   border-right: 8px solid var(--accent-color);
   border-left: 8px solid var(--accent-color);
-  transform: scaleX(0.95);
 }
 
-#hangMe:hover{
-  animation-name: hangMe;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
+
+#rocketMe {
+  transition: var(--transition-medium);
 }
-@keyframes hangMe{
-  from{
-    transform: rotateX(0deg);
-  } to {
-    transform: rotate(4deg);
-    background-color: var(--accent-color);
-  }
+#rocketMe:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 6px -2px var(--accent-color);
+  color: var(--accent-color);
 }
 
-#lightMe{
+
+#lightMe {
   transition: box-shadow 200ms, color 200ms;
 }
-#lightMe:hover{
+#lightMe:hover {
   color: var(--accent-color);
-  box-shadow: 3px 4px 3px var(--accent-color);
+  box-shadow: 0px 1px 3px 3px var(--accent-color);
 }
 
 
-#transparentMe{
-  transition: transform 200ms, background-color 200ms;
+#transparentMe {
+  border: 5px solid transparent;
+  transition: border var(--transition-fast), background-color var(--transition-fast);
 }
-#transparentMe:hover{
-  transform: scale(1.05);
+#transparentMe:hover {
+  border: 5px solid var(--accent-color);
   background-color: transparent;
 }
 
 
-#skewMe{
-  transition: 200ms;
+#shadowMe {
+  transition: box-shadow var(--transition-fast);
 }
-#skewMe:hover{
-  transform: skew(-7deg);
-  background-color: var(--accent-color);
+#shadowMe:hover {
+  box-shadow: inset 0px 0px 3px 3px var(--accent-color);
 }
 
 
-#offsetMe{
+#offsetMe {
   outline: 5px solid transparent;
   outline-offset: -9px;
-  transition: 250ms;
+  transition: outline-offset var(--transition-medium), outline-color var(--transition-medium);
 }
-#offsetMe:hover{
+#offsetMe:hover {
   outline-color: var(--accent-color);
   outline-offset: -2px;
 }
 
 
-#pushMe{
-  padding: 0.3em 1.15em;
-  border-radius: 13px;
+#scaleMe {
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+#scaleMe:hover {
+  transform: scale(1.03);
+  background-color: var(--accent-color);
+}
+
+
+#pushMe {
   border: none;
-  border-bottom: 6px solid #444;
-  transition: 200ms;
+  border-bottom: 6px solid #000;
+  transition: var(--transition-fast);
 }
-#pushMe:hover{
-  border-bottom: 4px solid #444;
-  transform: translateY(1px);
-  background-color: var(--accent-color);
-}
-
-#scaleMe{
-  transition: 150ms;
-}
-#scaleMe:hover{
-  transform: scale(1.05);
+#pushMe:hover {
+  border-bottom: 3px solid #000;
+  transform: translateY(2px);
   background-color: var(--accent-color);
 }
 
 
-#shadowMe{
-  transition: 250ms;
+#skewMe {
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
-#shadowMe:hover{
-  box-shadow: inset 0px 0px 3px 3px var(--accent-color);
+#skewMe:hover {
+  transform: skew(-6deg);
+  background-color: var(--accent-color);
 }
 
 
-#colorMe{
+#colorMe {
   background-color: transparent;
-  border: 3px solid black;
-  transition: 200ms;
+  border: 3px solid #000;
+  transition: var(--transition-medium);
 }
-#colorMe:hover{
-  border: 3px solid transparent;
+#colorMe:hover {
+  border-color: transparent;
   background-color: var(--accent-color);
-  color: white;
+  box-shadow: 0 0 6px 3px var(--accent-color);
 }
 
 
-#descendMe{
-  transition: 150ms;
+#descendMe {
+  transition: transform var(--transition-medium), background-color var(--transition-medium);
 }
-#descendMe:hover{
+#descendMe:hover {
   background-color: var(--accent-color);
-  transform: translateY(2.5px);
+  transform: translateY(4px);
 }
 
 
-#squareMe{
-  border-radius: 25px;
-  transition: 150ms;
-  border: 3px solid transparent;
+#squareMe {
+  transition: border-color var(--transition-fast), border-radius var(--transition-fast);
 }
-#squareMe:hover{
+#squareMe:hover {
   border-radius: 0px;
-  border: 3px solid var(--accent-color);
+  border-color: var(--accent-color);
 }
