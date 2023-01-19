@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta lang="en">
@@ -13,57 +13,65 @@
   <body>
     <header class="header">
       <div class="header__wrapper">
-        <h1 class="header__title" onclick="reload()">btn-mob</h1>
+        <h1 class="header__title">btn-mob</h1>
         <p class="header__info">very simple css-effects for btns</p>
       </div>
 
-      <ul class="menu">
-        <li class="menu-btn" onclick="changeTheme()">🌗</li>
-        <li class="menu-btn">
-          <div class="btn-size-div">
-            <button class="usual-btn btn-size" id="sizeUp" onclick="changeSize('+')">+</button>
-            <button class="usual-btn btn-size" id="sizeDown" onclick="changeSize('-')">-</button>
-          </div>
-        </li>
-        <li class="menu-btn"><a href="https://vk.com/id58913402" target="_blank">❔</a></li>
-      </ul>
+      <div class="header__wrapper_btns">
+        <button class="btn header__btn header__btn_theme">🌗</button>
+        <div class="header__wrapper_size">
+          <button class="btn header__btn header__btn_size-up">+</button>
+          <button class="btn header__btn header__btn_size-down">-</button>
+        </div>
+        <div class="header__wrapper_contacts">
+          <a class="header__link" target="_blank" href="https://t.me/jaysun0">
+            <img src="./img/telegram-icon.svg" alt="telegram-icon" class="header__icon">
+          </a>
+          <a class="header__link" target="_blank" href="https://github.com/jaysun0">
+            <img src="./img/github-icon.svg" alt="github-icon" class="header__icon">
+          </a>
+          <a class="header__link" target="_blank" href="https://jaysuno0.github.io/rsschool-cv/">
+            <img src="./img/page-icon.svg" alt="page-icon" class="header__icon">
+          </a>
+        </div>
+      </div>
     </header>
     <main>
       <div class="btn-div">
-        <button id="squeezeMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="squeezeMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="rocketMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="rocketMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="lightMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="lightMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="transparentMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="transparentMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="shadowMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="shadowMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="offsetMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="offsetMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="scaleMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="scaleMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="pushMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="pushMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="skewMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="skewMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="colorMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="colorMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="descendMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="descendMe" class="show-btn">show code</button>
       </div>
       <div class="btn-div">
-        <button id="squareMe" class="show-btn" onclick="showMe(this.id)">show me</button>
+        <button id="squareMe" class="show-btn">show code</button>
       </div>
     </main>
     <div class="show-box">
@@ -71,7 +79,7 @@
         <p class="code-title">Button's CSS code</p>
         <div id="show-box-text">btn css</div>
       </div>
-      <button class="usual-btn" onclick="closeShowBox()">close</button>
+      <button class="btn">close</button>
     </div>
   </body>
 </html>

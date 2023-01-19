@@ -131,46 +131,42 @@ button:hover {
 
 //CSS presets to change via JS
 let theme = 'light';
-const fontSize = 3;
+let fontSize = 3;
 
-function changeTheme(){
-  switch(theme){
+function changeTheme() {
+  switch(theme) {
     case 'light':
       domElements.root.style.setProperty('--main-color', '#bbb');
       domElements.root.style.setProperty('--secondary-color', '#888');
       domElements.bodyEl.style.color = 'var(--gray-color)';
-      theme = 'dark'
-      break
-    case 'dark':
+      theme = 'dark';
+      break;
+    default:
       domElements.root.style.setProperty('--main-color', '#777');
       domElements.root.style.setProperty('--secondary-color', '#333');
       domElements.bodyEl.style.color = '#fff';
-      theme = 'light'
+      theme = 'light';
   }
 }
 
-function changeSize(sign){
-  switch(sign){
+function changeSize(sign) {
+  switch(sign) {
     case '+':
-      if(fontSize < 9) fontSize++
-      break
-    case '-':
-      if(fontSize > 1) fontSize--
-      break
+      if(fontSize < 9) fontSize++;
+      break;
+    default:
+      if(fontSize > 1) fontSize--;
   }
-  domElements.buttons.forEach(el => el.style.fontSize = `1.${fontSize}em`)
+
+  domElements.buttons.forEach(el => el.style.fontSize = `1.${fontSize}em`);
 }
 
-function showMe(buttonId){
-  let cssText = effects[buttonId]
-  domElements.showBoxText.innerHTML = cssText
+function showMe(buttonId) {
+  domElements.showBoxText.innerHTML = effects[buttonId];
   domElements.showBox.style.display = 'flex';
 }
 
-function closeShowBox(){
-  domElements.showBox.style.display = 'none'
+function closeShowBox() {
+  domElements.showBox.style.display = 'none';
 }
 
-function reload(){
-  window.location.reload()
-}
