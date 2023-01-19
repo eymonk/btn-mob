@@ -1,24 +1,30 @@
 .show-box {
     display: none;
     position: absolute;
-    top: 5%;
-    left: 15%;
-    bottom: 5%;
-    right: 15%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 100px 1rem;
 
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-
-    border-radius: var(--border-radius-medium);
-    border: 5px solid var(--accent-color);
+    gap: 1rem;
     background-color: #000d;
 }
 
 .show-box__title {
+    text-align: center;
     font-size: 2em;
     color: var(--accent-color);
+}
+
+.show-box__info {
+    padding-bottom: 1rem;
+    color: #ccc;
 }
 
 .show-box__wrapper {
@@ -44,4 +50,12 @@ span.hljs-number {
 }
 span.hljs-attribute {
     color: #ffcc6d;
+}
+
+.show-box pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }

@@ -51,7 +51,7 @@ function showCode(buttonId) {
 function copyCode() {
   const showBoxCode = document.querySelector('.show-box__code').textContent;
   navigator.clipboard.writeText(showBoxCode);
-  dom.showBoxInfo.textContent = 'Copied the code to your clipboard.';
+  dom.showBoxInfo.textContent = '✔ Copied the code to your clipboard.';
   setTimeout(() => dom.showBoxInfo.textContent = ' ', 3000);
 }
 
