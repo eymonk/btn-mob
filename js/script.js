@@ -1,5 +1,3 @@
-console.log('Remember about project factory')
-
 const domElements = {
   buttons: document.querySelectorAll('.show-btn'),
   root: document.documentElement,
@@ -117,20 +115,20 @@ button:hover{
 }// `<pre><p id="effect-css"></p></pre>`
 
 //CSS presets to change via JS
-let theme = 'dark'
-let fontSize = 3
+let theme = 'light';
+const fontSize = 3;
 
 function changeTheme(){
   switch(theme){
     case 'light':
-      domElements.root.style.setProperty('--main-color', 'hsl(200, 90%, 75%)')
-      domElements.root.style.setProperty('--second-color', 'hsl(200, 100%, 50%)')
+      domElements.root.style.setProperty('--main-color', '#bbb');
+      domElements.root.style.setProperty('--secondary-color', '#888');
       domElements.bodyEl.style.color = 'var(--gray-color)';
       theme = 'dark'
       break
     case 'dark':
-      domElements.root.style.setProperty('--main-color', 'hsl(200, 70%, 45%)')
-      domElements.root.style.setProperty('--second-color', 'hsl(200, 80%, 20%)')
+      domElements.root.style.setProperty('--main-color', '#777');
+      domElements.root.style.setProperty('--secondary-color', '#333');
       domElements.bodyEl.style.color = '#fff';
       theme = 'light'
   }
