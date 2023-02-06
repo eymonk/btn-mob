@@ -1,5 +1,5 @@
 main {
-    height: 90%;
+    min-height: 90%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -9,6 +9,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 4rem 1rem;
 }
 .btn-wrapper:nth-child(odd) {
     background-color: var(--transparent-dark);

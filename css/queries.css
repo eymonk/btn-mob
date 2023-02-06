@@ -50,7 +50,6 @@
 
   .btn-wrapper {
     background-color: transparent;
-    padding: 2rem 1rem;
   }
   .btn-wrapper:nth-child(even) {
     background-color: transparent;
