@@ -45,6 +45,8 @@ function changeSize(up) {
 function showCode(buttonId) {
   dom.showBoxText.innerHTML = effects[buttonId];
   dom.showBox.style.display = 'flex';
+  dom.showBox.style.transform = `translateY(${scrollY}px)`;
+  dom.body.classList.add('no-scroll');
   hljs.highlightAll();
 }
 
@@ -56,6 +58,7 @@ function copyCode() {
 }
 
 function closeShowBox() {
+  dom.body.classList.remove('no-scroll');
   dom.showBox.style.display = 'none';
 }
 
