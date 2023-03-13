@@ -1,4 +1,6 @@
 header {
+    min-height: 98px;
+    height: 10%;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
